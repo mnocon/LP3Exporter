@@ -18,9 +18,11 @@ for (var i = 0; i < votedSongs.length; i++)
     result += (i + 1) + '\t' + artist + ' ' + title + '\t' + '\n';
 }
 
-var element = document.createElement("input");
-element.setAttribute("type", "button");
-element.setAttribute("value", "WYSWIETL LISTE");
-element.setAttribute("id", "moj_button_marek");
-element.setAttribute("onclick", "alert(result)");
-document.body.appendChild(element);
+var textarea = document.createElement("textarea");
+textarea.id = "lp3ExportFeature";
+textarea.cols = "100";
+textarea.rows = "10";
+textarea.textContent = result;
+target = document.getElementById('divCenter');
+target.appendChild(textarea);
+alert('Your votes are displayed at the bottom of the page.');
